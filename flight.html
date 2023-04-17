@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flight task</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function calculateRefund(f, t) {
+    if (t <= 0) {
+      return -1; // invalid time format
+    }
+    else if (t <= 30) {
+      return 0;
+    }
+    else if (t <= 120) {
+      return Math.min(0.1 * f, 100);
+    }
+    else if (t <= 300) {
+      return Math.min(0.2 * f, 100);
+    }
+    else {
+      return Math.min(0.5 * f, 100);
+    }
+  }
+</script>
+
+</html>
